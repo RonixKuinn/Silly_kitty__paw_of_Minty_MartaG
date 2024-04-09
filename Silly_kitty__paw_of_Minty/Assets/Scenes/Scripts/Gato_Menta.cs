@@ -12,7 +12,9 @@ public class Gato_Menta : MonoBehaviour
     private float inputHorizontal;
     public SpriteRenderer render;
     public Vector3 newPosition = new Vector3(50, 5, 0);
-    //public Animator anim;
+    
+    public Animator anim;
+    
     public GroundSensor_Menty sensor;
 
 
@@ -35,16 +37,16 @@ public class Gato_Menta : MonoBehaviour
         if (inputHorizontal< 0)
         {
             render.flipX = true;
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
         else if (inputHorizontal > 0)
         {
             render.flipX = false;
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
         else
         {
-            //anim.SetBool("IsRunning", false);
+            anim.SetBool("IsRunning", false);
         }
     }
 
@@ -56,11 +58,11 @@ public class Gato_Menta : MonoBehaviour
             if (sensor.isGrounded)
             {
                 rBody.AddForce(new Vector2(0, 1) * jumpforce, ForceMode2D.Impulse);
-                //anim.SetBool("IsJumping", true);
+                anim.SetBool("IsJumping", true);
             }
             else if (sensor.isGrounded == true)
             {
-                //anim.SetBool("IsJumping", true);
+                anim.SetBool("IsJumping", true);
             }
 
         }

@@ -1789,6 +1789,7 @@ MonoBehaviour:
   jump: 0
   render: {fileID: 0}
   newPosition: {x: 50, y: 5, z: 0}
+  anim: {fileID: 0}
   sensor: {fileID: 0}
 --- !u!95 &224656126
 Animator:
