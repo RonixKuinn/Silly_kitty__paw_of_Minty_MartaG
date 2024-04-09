@@ -8,14 +8,14 @@ public class Gato_Menta : MonoBehaviour
 
     public float movementSpeed = 15;
     public float jumpforce = 5;
+    public bool jump = false;
     private float inputHorizontal;
     public SpriteRenderer render;
     public Vector3 newPosition = new Vector3(50, 5, 0);
-    public Animator anim;
-    public bool jump = false;
+    //public Animator anim;
     public GroundSensor_Menty sensor;
-                    
-                    
+
+
     void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
@@ -26,34 +26,43 @@ public class Gato_Menta : MonoBehaviour
     {
         inputHorizontal = Input.GetAxis("Horizontal");
 
-        if(Input.GetButtonDown("Jump") && sensor.isGrounded == true)
-        {
-            
-            if(sensor.isGrounded)
-            {
-                 rBody.AddForce(new Vector2(0, 1) * jumpforce, ForceMode2D.Impulse);
-                 anim.SetBool("IsJumping", true);
-            }
-            else if(sensor.isGrounded == true)
-            {
-                 anim.SetBool("IsJumping", true);
-            }
-           
-        }
+        Movement();
+        Jump();
+    }
 
-        if(inputHorizontal < 0)
+    void Movement()
+    {
+        if (inputHorizontal< 0)
         {
             render.flipX = true;
-            anim.SetBool("IsRunning", true);
+            //anim.SetBool("IsRunning", true);
         }
-        else if(inputHorizontal > 0)
+        else if (inputHorizontal > 0)
         {
             render.flipX = false;
-            anim.SetBool("IsRunning", true);
+            //anim.SetBool("IsRunning", true);
         }
         else
         {
-            anim.SetBool("IsRunning", true);
+            //anim.SetBool("IsRunning", false);
+        }
+    }
+
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && sensor.isGrounded == true)
+        {
+
+            if (sensor.isGrounded)
+            {
+                rBody.AddForce(new Vector2(0, 1) * jumpforce, ForceMode2D.Impulse);
+                //anim.SetBool("IsJumping", true);
+            }
+            else if (sensor.isGrounded == true)
+            {
+                //anim.SetBool("IsJumping", true);
+            }
+
         }
     }
 
