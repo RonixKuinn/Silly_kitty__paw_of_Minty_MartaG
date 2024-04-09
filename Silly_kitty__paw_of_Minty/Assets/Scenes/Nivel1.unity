@@ -1764,7 +1764,7 @@ Transform:
   m_GameObject: {fileID: 224656120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.456171, y: -3.33, z: -2}
+  m_LocalPosition: {x: -7.456171, y: -3.33, z: -3}
   m_LocalScale: {x: 2.0518, y: 2.0518, z: 2.0518}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rBody: {fileID: 224656121}
   movementSpeed: 15
-  jumpforce: 200
+  jumpforce: 100
   jump: 0
   render: {fileID: 0}
   newPosition: {x: 50, y: 5, z: 0}
@@ -2662,7 +2662,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.96, y: 0, z: -10}
+  m_LocalPosition: {x: -1.96, y: 0.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2680,10 +2680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a42c9af6bf5f5a418ef9fc996a3521e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 224656124}
   offset: {x: 0, y: 0, z: 0}
-  minCameraPosition: {x: 0, y: 0}
-  maxCameraPosition: {x: 0, y: 0}
+  minCameraPosition: {x: -1.96, y: 0.37}
+  maxCameraPosition: {x: 81.58, y: 2.23}
 --- !u!1 &519703190
 GameObject:
   m_ObjectHideFlags: 0
@@ -8037,7 +8037,7 @@ Transform:
   m_GameObject: {fileID: 1441774875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8005273, y: 0.20239983, z: -2.344236}
+  m_LocalPosition: {x: 1.8005273, y: -0.01, z: -2.344236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
