@@ -1764,7 +1764,7 @@ Transform:
   m_GameObject: {fileID: 224656120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.456171, y: -3.33, z: -3}
+  m_LocalPosition: {x: -7.456171, y: -3.33, z: -3.2}
   m_LocalScale: {x: 2.0518, y: 2.0518, z: 2.0518}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2083,6 +2083,7 @@ GameObject:
   - component: {fileID: 310497220}
   - component: {fileID: 310497222}
   - component: {fileID: 310497221}
+  - component: {fileID: 310497223}
   m_Layer: 0
   m_Name: gusano
   m_TagString: Untagged
@@ -2099,7 +2100,7 @@ Transform:
   m_GameObject: {fileID: 310497219}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9037814, y: -2.4786017, z: -4.0287724}
+  m_LocalPosition: {x: -2.9037814, y: -3.58, z: -4.0287724}
   m_LocalScale: {x: 2.591, y: 2.591, z: 2.591}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2202,6 +2203,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &310497223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310497219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2252e95ddf46d3458f39afd9edd1d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &325400546
 GameObject:
   m_ObjectHideFlags: 0
@@ -8417,7 +8430,7 @@ Transform:
   m_GameObject: {fileID: 1477631143}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.3198953, y: -5.36, z: -1}
+  m_LocalPosition: {x: -6.3198953, y: -2.86, z: -1}
   m_LocalScale: {x: 3.500897, y: 3.500897, z: 3.500897}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9820,6 +9833,7 @@ GameObject:
   - component: {fileID: 1733086185}
   - component: {fileID: 1733086184}
   - component: {fileID: 1733086186}
+  - component: {fileID: 1733086187}
   m_Layer: 0
   m_Name: paloma_0001
   m_TagString: Antonia
@@ -9987,6 +10001,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1733086187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733086181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0610a7a72cce449a6a056cdcac4282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741561471
 GameObject:
   m_ObjectHideFlags: 0
