@@ -17,11 +17,17 @@ public class Gato_Menta : MonoBehaviour
     
     public GroundSensor_Menty sensor;
 
+    AudioSource source;
+    public AudioClip jumpSound;
+    
+
 
     void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
         render = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -59,6 +65,7 @@ public class Gato_Menta : MonoBehaviour
             {
                 rBody.AddForce(new Vector2(0, 1) * jumpforce, ForceMode2D.Impulse);
                 anim.SetBool("IsJumping", true);
+                source.PlayOneShot(jumpSound);
             }
             else if (sensor.isGrounded == true)
             {

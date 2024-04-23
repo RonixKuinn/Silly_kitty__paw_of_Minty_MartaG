@@ -6,8 +6,9 @@ public class Juguete : MonoBehaviour
 {
     private BoxCollider2D boxCollider2D;
 
-    //AudioSource source;
-    //public AudioClip coin;
+    AudioSource source;
+    public AudioClip coin;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,14 +17,14 @@ public class Juguete : MonoBehaviour
     }
     void Awake()
     {
-        //source = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            //source.PlayOneShot(Juguete);
+            source.PlayOneShot(coin);
             Destroy(gameObject, 0.5f);
         }
     }
