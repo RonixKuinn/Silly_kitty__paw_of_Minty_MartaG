@@ -13,6 +13,8 @@ public class Antomia : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip deathcatsound;
 
+    public SpriteRenderer render;
+
     public float enemySpeed = 5;
     public float enemyDirection = 1;
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class Antomia : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        render = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -36,15 +39,18 @@ public class Antomia : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3 || collision.gameObject.tag == "Antonia")
+        if (collision.gameObject.layer == 3 /* || collision.gameObject.tag == "Antonia"*/)
         {
             if (enemyDirection == 1)
             {
                 enemyDirection = -1;
+                render.flipX = true;
             }
+
             else if (enemyDirection == -1)
             {
                 enemyDirection = 1;
+                render.flipX = false;
             }
         }
 
@@ -56,6 +62,7 @@ public class Antomia : MonoBehaviour
         }
 
     }
+
 
     public void GoombaDeath()
     {

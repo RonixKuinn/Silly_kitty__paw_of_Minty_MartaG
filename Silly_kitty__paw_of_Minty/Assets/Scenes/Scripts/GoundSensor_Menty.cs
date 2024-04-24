@@ -16,8 +16,14 @@ public class GroundSensor_Menty : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Gato_Menta.rBody.AddForce(Vector2.up * Gato_Menta.jumpforce, ForceMode2D.Impulse);
-            anim.SetBool("IsJumping", true);
+        //Gato_Menta.rBody.AddForce(Vector2.up * Gato_Menta.jumpforce, ForceMode2D.Impulse);
+        //anim.SetBool("IsJumping", true);
+        isGrounded = true;
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        isGrounded = true;
     }
 
     void OnTriggerExit2D(Collider2D collider)
