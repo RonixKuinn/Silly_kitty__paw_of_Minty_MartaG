@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class Antomia : MonoBehaviour
 {
     private Rigidbody2D rBody;
@@ -17,6 +19,8 @@ public class Antomia : MonoBehaviour
 
     public float enemySpeed = 5;
     public float enemyDirection = 1;
+
+    //private GameManager gameManager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,6 +28,7 @@ public class Antomia : MonoBehaviour
         source = GetComponent<AudioSource>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         render = GetComponent<SpriteRenderer>();
+       // gameManager = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -35,7 +40,9 @@ public class Antomia : MonoBehaviour
     /*public void LoadGameOver()
     {
         SceneManager.LoadScene("GameOver");
-    }*/
+    }
+    */
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -58,7 +65,7 @@ public class Antomia : MonoBehaviour
         {
             Destroy(collision.gameObject);
             source.PlayOneShot(deathcatsound);
-            //SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
         }
 
     }

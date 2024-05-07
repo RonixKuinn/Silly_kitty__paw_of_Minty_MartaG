@@ -20,7 +20,7 @@ public class Gato_Menta : MonoBehaviour
     AudioSource source;
     public AudioClip jumpSound;
     
-
+    //using UnityEngine.SceneManagement;
 
     void Awake()
     {
