@@ -7,11 +7,14 @@ public class GroundSensor_Menty : MonoBehaviour
     public bool isGrounded;
     public Animator anim;
     Gato_Menta Gato_Menta;
+    //public AudioClip deathSound;
+    //private AudioSource source;
 
     void Awake()
     {
         anim = GetComponentInParent<Animator>();
         Gato_Menta = GetComponentInParent<Gato_Menta>();
+        //source = GetComponentInParent<AudioSource>;
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -27,7 +30,7 @@ public class GroundSensor_Menty : MonoBehaviour
         if (collider.gameObject.tag == "Antonia")
         {
             Destroy(collider.gameObject);
-            //source.PlayOneShot(deathcatsound);
+            //source.PlayOneShot(deathSound);
         }
 
     }

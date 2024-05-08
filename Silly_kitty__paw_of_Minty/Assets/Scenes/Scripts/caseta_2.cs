@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
-
-public class Caseta : MonoBehaviour
+public class caseta_2 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,7 @@ public class Caseta : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Nvel2");
+            SceneManager.LoadScene("MainMenu");
         }
 
     }

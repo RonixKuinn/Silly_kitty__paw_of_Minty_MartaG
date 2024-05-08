@@ -40,8 +40,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Exit");
     }
 
-    public void LoadSecondLevel()
+    /*public void LoadSecondLevel()
     {
         SceneManager.LoadScene("Nivel2");
-    }
+    }*/
 }
