@@ -67,12 +67,14 @@ public class Gato_Menta : MonoBehaviour
                 anim.SetBool("IsJumping", true);
                 source.PlayOneShot(jumpSound);
             }
-            else if (sensor.isGrounded == true)
+            
+
+        }
+        
+        if (sensor.isGrounded == true)
             {
                 anim.SetBool("IsJumping", false);
             }
-
-        }
     }
 
     void FixedUpdate()

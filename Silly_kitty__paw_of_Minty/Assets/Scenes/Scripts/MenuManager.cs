@@ -39,4 +39,9 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Exit");
     }
+
+    public void LoadSecondLevel()
+    {
+        SceneManager.LoadScene("Nivel2");
+    }
 }

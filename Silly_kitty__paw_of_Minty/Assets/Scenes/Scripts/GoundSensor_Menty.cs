@@ -24,6 +24,12 @@ public class GroundSensor_Menty : MonoBehaviour
     void OnTriggerStay2D(Collider2D collider)
     {
         isGrounded = true;
+        if (collider.gameObject.tag == "Antonia")
+        {
+            Destroy(collider.gameObject);
+            //source.PlayOneShot(deathcatsound);
+        }
+
     }
 
     void OnTriggerExit2D(Collider2D collider)
